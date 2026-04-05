@@ -1,0 +1,5 @@
+<p>Este es el componente hijo!</p>
+<h1>{{msg()}}</h1>
+@for (p of person(); track p.id){
+  <h1>{{p.id + 1}} - {{p.name}} - edad: {{p.age}}</h1>
+}
