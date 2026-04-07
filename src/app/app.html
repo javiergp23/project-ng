@@ -24,5 +24,8 @@
 }
 <hr>
 <h1>Props</h1>
-<app-child [msg]="msg" [person]="person"></app-child>
+
+
+<app-child [msg]="msg" [person]="person" (login)="setName($event)"></app-child>
+<h1>{{name}}</h1>
 <router-outlet />

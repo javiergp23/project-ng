@@ -1,4 +1,4 @@
-import { Component, input, Input } from '@angular/core';
+import { Component, EventEmitter, input, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-child',
@@ -15,4 +15,12 @@ export class Child {
   // person: any;
 
   person = input<any[]>();
+
+  @Output()
+  login: EventEmitter<any> = new EventEmitter<any>;
+
+  username: string = 'Javier'
+  handleLogin() {
+    this.login.emit(this.username);
+  }
 }

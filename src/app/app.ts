@@ -58,4 +58,9 @@ export class App {
       age: 40
     }
   ];
+
+  name: string = ''
+  setName(e: any){
+    this.name = e
+  }
 }
