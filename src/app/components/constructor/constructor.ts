@@ -7,8 +7,15 @@ import { Component } from '@angular/core';
   styleUrl: './constructor.css',
 })
 export class Constructor {
+  product: any;
   username: string;
+  
  constructor(){
   this.username = 'Javier';
- }
+  this.product = {
+    name: "Computer",
+    price: 1000,
+    isForSale: true
+  }
+}
 }
