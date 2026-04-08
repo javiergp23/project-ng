@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import Product from '../../models/Product';
 
 @Component({
   selector: 'app-constructor',
@@ -7,9 +8,9 @@ import { Component } from '@angular/core';
   styleUrl: './constructor.css',
 })
 export class Constructor {
-  product: any;
+  product: Product;
   username: string;
-  
+
  constructor(){
   this.username = 'Javier';
   this.product = {
