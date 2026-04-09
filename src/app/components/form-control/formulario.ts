@@ -23,4 +23,8 @@ export class Formulario {
       director: this.director
     });
   }
+
+  handleSubmit(){
+    console.log(this.movieForm)
+  }
 }
