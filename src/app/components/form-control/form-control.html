@@ -1,1 +1,7 @@
 <p>form-control works!</p>
+
+<form [formGroup]="movieForm">
+  <fieldset>
+    <input type="text" id="movie-name" formControlName="name" placeholder="Movie name">
+  </fieldset>
+</form>
