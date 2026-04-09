@@ -2,6 +2,15 @@
 
 <form [formGroup]="movieForm">
   <fieldset>
+    <label for="movie-name">Movie Name:</label>
     <input type="text" id="movie-name" formControlName="name" placeholder="Movie name">
+  </fieldset>
+  <fieldset>
+    <label for="movie-name">Movie duration:</label>
+    <input type="text" id="movie-duration" formControlName="duration" placeholder="Movie duration">
+  </fieldset>
+  <fieldset>
+    <label for="movie-name">Movie director:</label>
+    <input type="text" id="movie-director" formControlName="director" placeholder="Movie director">
   </fieldset>
 </form>
