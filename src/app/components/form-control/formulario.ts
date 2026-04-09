@@ -25,6 +25,6 @@ export class Formulario {
   }
 
   handleSubmit(){
-    console.log(this.movieForm)
+    console.log(this.movieForm.value)
   }
 }
