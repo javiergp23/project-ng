@@ -1,6 +1,6 @@
 <p>form-control works!</p>
 
-<form [formGroup]="movieForm">
+<form [formGroup]="movieForm" (submit)="handleSubmit()">
   <fieldset>
     <label for="movie-name">Movie Name:</label>
     <input type="text" id="movie-name" formControlName="name" placeholder="Movie name">
@@ -13,5 +13,5 @@
     <label for="movie-name">Movie director:</label>
     <input type="text" id="movie-director" formControlName="director" placeholder="Movie director">
   </fieldset>
-  <button (click)="handleSubmit()">Create Movie</button>
+  <button>Create Movie</button>
 </form>

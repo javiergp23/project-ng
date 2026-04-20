@@ -14,9 +14,10 @@ export class Formulario {
   director: FormControl;
 
   constructor(){
-    this.name = new FormControl();
-    this.duration = new FormControl();
-    this.director = new FormControl();
+    this.name = new FormControl('');
+    this.duration = new FormControl('');
+    this.director = new FormControl('');
+
     this.movieForm = new FormGroup({
       name: this.name,
       duration: this.duration,
@@ -24,7 +25,7 @@ export class Formulario {
     });
   }
 
-  handleSubmit(){
+  handleSubmit(): void{
     console.log(this.movieForm.value)
   }
 }

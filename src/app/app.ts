@@ -4,10 +4,11 @@ import { Header } from './components/header/header';
 import { FormsModule } from '@angular/forms';
 import { Child } from './components/child/child';
 import { Constructor } from './components/constructor/constructor';
+import { Formulario } from './components/form-control/formulario';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Header, FormsModule, Child, Constructor],
+  imports: [RouterOutlet, Header, FormsModule, Child, Constructor, Formulario],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
