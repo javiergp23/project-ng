@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormGroup, FormControl, ReactiveFormsModule } from '@angular/forms';
+import { FormGroup, FormControl, ReactiveFormsModule, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-formulario',
@@ -14,8 +14,8 @@ export class Formulario {
   director: FormControl;
 
   constructor(){
-    this.name = new FormControl('');
-    this.duration = new FormControl('');
+    this.name = new FormControl('', Validators.required);
+    this.duration = new FormControl('', [Validators.required, Validators.max(300)]);
     this.director = new FormControl('');
 
     this.movieForm = new FormGroup({
@@ -27,5 +27,6 @@ export class Formulario {
 
   handleSubmit(): void{
     console.log(this.movieForm.value)
+    this.movieForm.reset();
   }
 }
