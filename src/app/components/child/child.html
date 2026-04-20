@@ -6,4 +6,7 @@
 <hr>
 <div>
   <button (click)="handleLogin()" class="p-2 m-2 border shadow-md">Login</button>
+<h1>{{productService.product.name}}</h1>
+<button (click)="productService.setProductName('Javier')">Change Name</button>
 </div>
+
