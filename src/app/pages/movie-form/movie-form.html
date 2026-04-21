@@ -1,0 +1,17 @@
+<p>movie-form works!</p>
+
+<form (submit)="handleSubmit()" [formGroup]="movieForm">
+  <fieldset>
+    <label for="name" >Name</label>
+    <input type="text" formControlName="name" >
+  </fieldset>
+  <fieldset>
+    <label for="duration">Duration</label>
+    <input type="text" formControlName="duration">
+  </fieldset>
+  <fieldset>
+    <label for="director">Director</label>
+    <input type="text" formControlName="director">
+  </fieldset>
+  <button [disabled]="movieForm.invalid">Submit</button>
+</form>
