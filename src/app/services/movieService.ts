@@ -23,5 +23,8 @@ export class MovieService {
     ]
   }
 
-  
+  addMovie(movie: Movie){
+    this.movies.push(movie);
+  }
+
 }

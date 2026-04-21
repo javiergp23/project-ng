@@ -28,6 +28,8 @@ export class MovieForm {
 
   handleSubmit(): void{
     console.log(this.movieForm.value)
+    this.movieService.addMovie(this.movieForm.value);
     this.movieForm.reset();
   }
+
 }
