@@ -25,7 +25,13 @@ button{
   border-radius: 20px;
   background-color: rgb(31, 31, 238);
   color: white;
-  margin-left: 25%;
+  margin-left: 20%;
   width: 200px;
 }
 
+button:hover{
+  background-color: black;
+  color: white;
+  transition: all 1s;
+  font-weight: bold;
+}
