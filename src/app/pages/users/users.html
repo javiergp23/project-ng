@@ -1,9 +1,11 @@
 <p>users works!</p>
 
-<ul>
+<div>
   @for (user of users; track $index) {
-    <li>{{user.name}}</li>
+    <a [routerLink]="user.id">
+      <li>{{user.name}}</li>
+    </a>
   }
-</ul>
-<p>{{ users.length }}</p>
+</div>
+
 

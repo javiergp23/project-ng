@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { UsersService } from '../../services/usersService';
 import { ChangeDetectorRef } from '@angular/core';
+import { RouterLink } from "@angular/router";
 
 @Component({
   selector: 'app-users',
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './users.html',
   styleUrl: './users.css',
 })
