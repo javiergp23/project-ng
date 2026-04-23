@@ -1,7 +1,9 @@
 <p>users works!</p>
 
 <ul>
-  @for(user of usersService.users; track $index){
+  @for (user of users; track $index) {
     <li>{{user.name}}</li>
   }
 </ul>
+<p>{{ users.length }}</p>
+

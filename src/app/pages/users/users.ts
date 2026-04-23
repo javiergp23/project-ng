@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UsersService } from '../../services/usersService';
+import { ChangeDetectorRef } from '@angular/core';
 
 @Component({
   selector: 'app-users',
@@ -8,16 +9,21 @@ import { UsersService } from '../../services/usersService';
   styleUrl: './users.css',
 })
 export class Users implements OnInit{
-  constructor(public usersService: UsersService){}
 
-  ngOnInit(): void {
+  users: any[] = [];
+
+  constructor(public usersService: UsersService, private cdr: ChangeDetectorRef){}
+
+   ngOnInit(): void {
     this.getUsers();
   }
 
   getUsers(){
     this.usersService.getUsers().subscribe({
       next: (users: any[]) => {
-        this.usersService.users = users;
+        console.log(users)
+        this.users = users;
+        this.cdr.detectChanges();
       },
       error: (error) => {
         console.error('Error fetching users:', error);

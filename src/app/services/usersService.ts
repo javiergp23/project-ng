@@ -6,9 +6,9 @@ import { Injectable } from '@angular/core';
 })
 export class UsersService {
   readonly API_URL = "https://jsonplaceholder.typicode.com/users"
-  users: any[];
+
   constructor(private http: HttpClient){
-    this.users = [];
+
   }
 
   getUsers(){
